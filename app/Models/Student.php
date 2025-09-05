@@ -7,15 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+    /** @use HasFactory<\Database\Factories\StudentFactory> */
     use HasFactory;
-
-    public $primaryKey='id';
-    public $fillable = [
-        'khmer_name',
-        'latin_name',
-        'gender',
-        'dob',
-        'address',
-        'tel',
-    ];
+    public $primaryKey = 'sid';
+    public $fillable = ['name'];
 }

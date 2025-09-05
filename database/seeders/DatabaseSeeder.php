@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
-            'password' => 'test123', // password
+            'password' => 'test123'
         ]);
 
         $this->call(
-            class: [
-                StudentSeeder::class,
-                //MajorSeeder :: class,
+             [
+                //StudentSeeder::class,
+                TodosSeeder::class,
             ]
             );
     }
